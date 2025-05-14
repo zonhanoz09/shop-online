@@ -1,5 +1,6 @@
-package com.example.shoponline;
+package com.example.shoponline.controller;
 
+import com.example.shoponline.constants.Pages;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,9 +8,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 
-    @GetMapping("/")
+    @GetMapping
     public String home(Model model) {
-        model.addAttribute("message", "Chào mừng bạn đến with Spring Boot!");
-        return "index";
+        model.addAttribute("perfumes", "test");
+        return Pages.HOME;
     }
+
 }
