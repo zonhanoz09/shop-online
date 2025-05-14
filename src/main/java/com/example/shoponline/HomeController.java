@@ -10,6 +10,6 @@ public class HomeController {
     @GetMapping("/")
     public String home(Model model) {
         model.addAttribute("message", "Chào mừng bạn đến with Spring Boot!");
-        return "index"; // Trang HTML sẽ nằm trong thư mục src/main/resources/templates/index.html
+        return "index";
     }
 }
