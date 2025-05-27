@@ -10,7 +10,20 @@
             <div class="row mx-3">
                 <th:block th:replace="fragments/account-fragments :: account-sidebar"/>
                 <div class="col-md-10">
-                    perfumes
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Perfumer</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="product : ${perfumes}">
+                            <td th:text="${product.id}"></td>
+                            <td th:text="${product.perfumer}"></td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
